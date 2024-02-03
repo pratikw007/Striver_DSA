@@ -22,11 +22,25 @@ public class SpiralM {
                 }
                 //Bottom
                 for (int j = endCol - 1; j  >= startCol ; j--) {
-                    System.out.print(matrix[]);
+                    if (startRow == endRow) {
+                        break;
+                    }
+                    System.out.print(matrix[endRow][j]+" ");
                 }
-
+                //left
+                for (int i = endRow-1; i >= startRow; i--) {
+                    if (startCol == endCol) {
+                        break;
+                    }
+                    System.out.print(matrix[i][startCol]+" ");
+                }
+                startCol++;
+                startRow++;
+                endCol--;
+                endRow--; 
 
        }
+       System.out.println();
  
     }
     public static void main(String[] args) {
